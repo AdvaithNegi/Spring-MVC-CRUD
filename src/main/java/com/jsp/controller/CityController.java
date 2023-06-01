@@ -51,7 +51,7 @@ public class CityController {
 	public ModelAndView deleteCity(@RequestParam(name = "id") int id) {
 		cityService.deleteCity(id);
 		ModelAndView modelAndView = new ModelAndView("deleteCity.jsp");
-		modelAndView.addObject("deleted", "Student with " + id + " Deleted.");
+		modelAndView.addObject("deleted", "City with " + id + " Deleted.");
 		return modelAndView;
 	}
 
@@ -66,7 +66,7 @@ public class CityController {
 	public ModelAndView updatedFinally(@ModelAttribute City city) {
 		cityService.updateCity(city, city.getId());
 		ModelAndView modelAndView = new ModelAndView("home.jsp");
-		modelAndView.addObject("updated", "student with id " + city.getId() + " updated");
+		modelAndView.addObject("updated", "city with id " + city.getId() + " updated");
 		return modelAndView;
 	}
 
